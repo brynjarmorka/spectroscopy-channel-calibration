@@ -1,5 +1,7 @@
 .ipynb_checkpoints
 .vscode
 
+# ignore all files in example_data given by Ton
+example_data/**  
 
 **__pycache__
