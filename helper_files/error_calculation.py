@@ -10,10 +10,10 @@ def rms_error(y, y_fit):
 
     Parameters
     ----------
-    y : list
-        list of values
-    y_fit : list
-        list of values
+    y : list or np.array
+        The values to compare to, s['intensity']
+    y_fit : list or np.array
+        The values to compare, s['intensity_fit']
 
     Returns
     -------

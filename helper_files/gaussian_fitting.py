@@ -56,7 +56,7 @@ def n_gaussians(x, *args):
 # now we need a functions which fits peak guesses to gaussian curves
 def fit_n_peaks_to_gaussian(
     x,
-    raw_y,
+    y,
     guessed_peaks,
     guessed_std=1,
     guessed_amp=1,
@@ -93,9 +93,6 @@ def fit_n_peaks_to_gaussian(
     if guessed_amp == 1:
         guessed_amp = np.ones(len(guessed_peaks))
 
-    #
-    # x = np.arange(0, 2048, 1)
-
     # making the list of the initial guesses
     for i in range(len(guessed_peaks)):
         if i == 0:
@@ -103,5 +100,5 @@ def fit_n_peaks_to_gaussian(
         else:
             init_vals += [guessed_amp[i], guessed_peaks[i], guessed_std[i]]
     # fitting the data to the gaussians
-    fit_vals, covar = curve_fit(n_gaussians, x, raw_y, p0=init_vals)
+    fit_vals, covar = curve_fit(n_gaussians, x, y, p0=init_vals)
     return [fit_vals, covar]
