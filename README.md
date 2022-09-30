@@ -2,9 +2,13 @@
 
 Made by Brynjar Morka Mæhlum for the subject TFY4255, as a part of Brynjars "TFY4520 Nanoteknologi, fordypningsprosjekt".
 
+---
+
 You can use this repository interactivly with Binder:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD)
+
+---
 
 ## Goal of this notebook:
 
@@ -24,7 +28,7 @@ When we have calibrated a spectrum, we could also find:
 
 ---
 
-### What we will do:
+## What we will do:
 
 1. Read in the data of a known spectrum
 2. Fit the data to a gaussian
@@ -34,7 +38,7 @@ When we have calibrated a spectrum, we could also find:
 
 ---
 
-### Organisation of the repository
+## Organisation of the repository
 
 This is the file tree:
 
@@ -71,7 +75,7 @@ function_name?
 
 ---
 
-### Example data files
+## Example data files
 
 - Ex1_EDS_GaAs_30kV.emsa
   - Aquired at the SEM Apreo at NTNU NanoLab, 6. September 2022
@@ -79,10 +83,11 @@ function_name?
   - Aquired by Ton?
 - Ex3_Cu.mca
   - Aquired by Ton?
+- Info on the other files will come soon
 
 ---
 
-### Challenges I've had
+## Challenges I've had
 
 - What is the actual zero / start of the data? (solved)
   - What to do with the zero-peak which some instruments have?
