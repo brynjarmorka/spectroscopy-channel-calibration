@@ -1,4 +1,4 @@
-name: spectroscopy-channel-calibration
+name: example-environment
 channels:
   - conda-forge
 dependencies:

@@ -2,6 +2,10 @@
 
 Made by Brynjar Morka Mæhlum for the subject TFY4255, as a part of Brynjars "TFY4520 Nanoteknologi, fordypningsprosjekt".
 
+You can interact with this repository with Binder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD)
+
 ## Goal of this notebook:
 
 **Use a spectrum with at least two known peaks to calibrate the channel width of a detector, and then use the calibration to plot an unknown spectrum.**
