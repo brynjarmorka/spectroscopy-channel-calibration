@@ -50,7 +50,6 @@ This is the file tree:
 │
 └───helper_files
     │   calibration.py
-    │   error_calculation.py
     │   gaussian_fitting.py
     │   plotting.py
     │   read_data.py

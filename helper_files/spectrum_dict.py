@@ -88,7 +88,6 @@ def init_known_spectrum(
         "fit_params": None,
         "fit_cov": None,
         "intensity_fit": None,
-        "rms_error": None,
         "start_str": start_str,
         "stop_str": stop_str,
         "line_endings": line_endings,
@@ -199,7 +198,6 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
         "fit_params": None,
         "fit_cov": None,
         "intensity_fit": None,
-        "rms_error": None,
     }
 
     print(f"\nSuccess! {spectrum['filepath']} was read into a dictionary\n")
