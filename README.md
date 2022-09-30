@@ -8,8 +8,6 @@ Use the Binder link below to open this repository in an online and interactive w
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD)
 
-_The HTML plots from plotly are not visible in Binder, that will be fixed soon_
-
 ---
 
 ## Goal of this notebook:
