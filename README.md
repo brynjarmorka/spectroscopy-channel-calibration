@@ -34,7 +34,25 @@ When we have calibrated a spectrum, we could also find:
 
 This is the file tree:
 
-**insert file tree**
+```cmd
+│   .gitignore
+│   channel_calibration.ipynb
+│   Ex1_EDS_GaAs_30kV.emsa
+│   Ex2_NiO_on_Mo_not_calibrated.msa
+│   Ex3_Cu.mca
+│   LICENSE
+│   README.md
+│   requirements.yml
+│
+└───helper_files
+    │   calibration.py
+    │   error_calculation.py
+    │   gaussian_fitting.py
+    │   plotting.py
+    │   read_data.py
+    │   spectrum_dict.py
+    │   __init__.py
+```
 
 The main notebook is called "channel_calibration.ipynb", which contains a step-by-step calibration of a known spectrum, and then using that on an unknown spectrum.
 
@@ -47,6 +65,8 @@ function_name?
 ```
 >>> prints the docstring of function_name
 ```
+
+---
 
 ### Example data files
 
@@ -61,12 +81,13 @@ function_name?
 
 ### Challenges I've had
 
-- What is the actual zero / start of the data?
+- What is the actual zero / start of the data? (solved)
   - What to do with the zero-peak which some instruments have?
   - Some (or all?) spectra starts measuring before 0. How do I set the 0 right?
-- Some datasets (eg. .emsa of GaAs_30keV) starts with negative keV values.
+- Some datasets (eg. .emsa of GaAs_30keV) starts with negative keV values. (solved)
 - Not possible to recognize all peaks, since some are low.
   - Without bg removal one peak is usually fitted in the middle as the bg with a very high std
 - For some reason it did not work to use the raw x values from .emsa when fitting, while using channels as int worked.
   - Also fitting is slower / worse with non-normalized values.
-    - Might be because it is easier to guess correct a, peak, and std with normalized values
+    - Might be because it is easier to guess correct amp, mu, and std with normalized values
+  - workaround: fit with channels and intensity normalized to 1
