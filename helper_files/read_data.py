@@ -36,6 +36,7 @@ def read_lines(filepath, start_string, stop_string, line_endings, print_info=Tru
         lines = f.readlines()
 
         if print_info:
+            print(f"Reading {filepath}")
             print(f"The first line looks like this: {repr(lines[0])}")
 
         # remove the line endings, specified by line_endings
@@ -111,8 +112,9 @@ def read_xy_data(
 
     # optional print of the information about the data
     if print_info:
-        print(f"Read {len(lines)} data points from {filepath}")
-        print(f"First entry: {data[0]}\nLast entry: {data[-1]}")
+        print(
+            f"{len(lines)} data points, first entry = {data[0]}, last entry = {data[-1]}\n"
+        )
 
     # returns the raw_channels and counts as numpy arrays
     return np.array([raw_channels, counts])
@@ -169,8 +171,7 @@ def read_only_y_data(
 
     # optional print of the information about the data
     if print_info:
-        print(f"Read {len(lines)} data points from {filepath}")
-        print(f"First entry: {data.T[0]}\nLast entry: {data.T[-1]}")
+        print(f"{len(lines)} data points, first entry = {data.T[0]}, last entry = {data.T[-1]}\n")
 
     # returns the data, which is only raw counts and channels
     return data

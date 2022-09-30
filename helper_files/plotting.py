@@ -94,7 +94,7 @@ def plotly_plot(
     vlines_name : list, optional
         list of names for the vertical lines, by default None
     fit_params : list, optional
-        [amp1, mu1, sigma1, amp2, mu2, sigma2, ...], by default None
+        [amp1, mu1, std1, amp2, mu2, std2, ...], by default None
     fig : plotly.graph_objects.Figure, optional
         if you want to add these plots to an existing figure, by default None
     start : int, optional
@@ -202,7 +202,7 @@ def plotly_plot(
                     x=x[start:stop],
                     y=gauss_y,  # is made from [start:stop] above
                     mode="lines",
-                    name=f"mu={fit_params[i]:.2f}, std={fit_params[i + 1]:.2f}, a={fit_params[i + 2]:.2f}",
+                    name=f"a={fit_params[i]:.2f}, mu={fit_params[i + 1]:.2f}, std={fit_params[i + 2]:.2f}",
                 )
             )
 

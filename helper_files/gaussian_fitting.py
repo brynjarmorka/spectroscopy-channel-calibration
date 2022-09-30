@@ -4,9 +4,9 @@ import numpy as np
 from scipy.optimize import curve_fit
 
 
-def gaussian(x, amp, mu, sigma):
+def gaussian(x, amp, mu, std):
     """
-    Returns the value of a gaussian function with amplitude amp, mean mu and standard deviation sigma at x.
+    Returns the value of a gaussian function with amplitude amp, mean mu and standard deviation std at x.
 
     Parameters
     ----------
@@ -16,7 +16,7 @@ def gaussian(x, amp, mu, sigma):
         amplitude of the gaussian
     mu : float
         center of the gaussian
-    sigma : float
+    std : float
         standard deviation of the gaussian
 
     Returns
@@ -25,7 +25,7 @@ def gaussian(x, amp, mu, sigma):
         list with the values of the gaussian at x
     """
 
-    return amp * np.exp(-((x - mu) ** 2) / (2 * sigma**2))
+    return amp * np.exp(-((x - mu) ** 2) / (2 * std**2))
 
 
 def n_gaussians(x, *args):
