@@ -6,9 +6,9 @@ Made by Brynjar Morka Mæhlum for the subject TFY4255, as a part of Brynjars "TF
 
 Use the Binder link below to open this repository in an online and interactive way:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD?labpath=channel_calibration.ipynb)
 
-*The HTML plots from plotly are not visible, that will be fixed soon*
+*The HTML plots from plotly are not visible in Binder, that will be fixed soon*
 
 ---
 
