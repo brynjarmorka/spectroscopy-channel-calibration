@@ -45,12 +45,20 @@ This is the file tree:
 ```cmd
 │   .gitignore
 │   channel_calibration.ipynb
-│   Ex1_EDS_GaAs_30kV.emsa
-│   Ex2_NiO_on_Mo_not_calibrated.msa
-│   Ex3_Cu.mca
+│   environment.yml
 │   LICENSE
 │   README.md
-│   requirements.yml
+│
+├───example_data
+│       EDS-SEM_GaSb.msa
+│       EDS-TEM_GaSb.msa
+│       Ex1_EDS_GaAs_30kV.emsa
+│       Ex2_NiO_on_Mo_not_calibrated.msa
+│       Ex3_Cu.mca
+│       NiOMo_map_2100.hdf5
+│       No_sample.mca
+│       TEM_NiO.emsa
+│       unknown_not_calibrated.msa
 │
 └───helper_files
     │   calibration.py
