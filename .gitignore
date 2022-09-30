@@ -2,6 +2,6 @@
 .vscode
 
 # ignore all files in example_data given by Ton
-example_data/**  
+example_data/**.hdf5 
 
 **__pycache__

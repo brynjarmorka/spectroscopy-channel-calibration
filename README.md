@@ -2,7 +2,7 @@
 
 Made by Brynjar Morka Mæhlum for the subject TFY4255, as a part of Brynjars "TFY4520 Nanoteknologi, fordypningsprosjekt".
 
-You can interact with this repository with Binder
+You can use this repository interactivly with Binder:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD)
 
