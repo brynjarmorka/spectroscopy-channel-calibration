@@ -1,0 +1,10 @@
+# file for running the script in binder
+# https://mybinder.org/v2/gh/brynjarmorka/spectroscopy-channel-calibration/HEAD
+
+name: spectroscopy-channel-calibration
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - plotly
