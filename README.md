@@ -1,6 +1,6 @@
 # spectroscopy-channel-calibration
 
-Made by Brynjar Morka Mæhlum for the subject TFY4255, as a part of Brynjars "TFY4520 Nanoteknologi, fordypningsprosjekt".
+Made by Brynjar Morka Mæhlum for the subject "TFY4255 Materialfysikk", as a part of Brynjars "TFY4520 Nanoteknologi, fordypningsprosjekt".
 
 ---
 

@@ -56,7 +56,7 @@ def plot_lines(
     fig.update_layout(title=title, xaxis_title=xaxis_title, yaxis_title=yaxis_title)
 
     # show the figure
-    fig.show()
+    fig.show(renderer="notebook")
 
 
 def plotly_plot(

@@ -31,7 +31,8 @@ def read_lines(filepath, start_string, stop_string, line_endings, print_info=Tru
         list of the lines in the file
     """
     # open the file in read mode, and closes f when the block is done
-    with open(filepath, "r") as f:
+    # encoding='cp1252' is for the special characters in the .mca file
+    with open(filepath, "r", encoding='cp1252') as f:
         # read the file line by line
         lines = f.readlines()
 
