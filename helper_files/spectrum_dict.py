@@ -135,7 +135,7 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
 
     # stop if the known spectrum are not calibrated
     if known_spectrum['dispersion'] is not None and known_spectrum['offset'] is not None and known_spectrum['kev_calibrated']is not None:
-        print(f"Calibrating {name} with {known_spectrum['name']} using:")
+        print(f"Calibrating '{name}' with '{known_spectrum['name']}' using:")
         print(f"\tDispersion = {known_spectrum['dispersion']}")
         print(f"\tOffset = {known_spectrum['offset']}")
         print(f"\tAnd the calibrated keV x-axis from {known_spectrum['name']}")
@@ -200,6 +200,6 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
         "intensity_fit": None,
     }
 
-    print(f"\nSuccess! {spectrum['filepath']} was read into a dictionary\n")
+    print(f"Success! {spectrum['filepath']} was read into a dictionary\n")
     return spectrum
     
