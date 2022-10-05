@@ -4,4 +4,7 @@
 # ignore all files in example_data given by Ton
 example_data/**.hdf5 
 
+# the calibrated files are not for GitHub
+Lab3_data_calibrated/** 
+
 **__pycache__

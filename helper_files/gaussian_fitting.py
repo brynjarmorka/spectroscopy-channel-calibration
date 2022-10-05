@@ -2,6 +2,7 @@
 
 import numpy as np
 from scipy.optimize import curve_fit
+from scipy.stats import norm
 
 
 def gaussian(x, amp, mu, std):
@@ -102,3 +103,16 @@ def fit_n_peaks_to_gaussian(
     # fitting the data to the gaussians
     fit_vals, covar = curve_fit(n_gaussians, x, y, p0=init_vals)
     return [fit_vals, covar]
+
+
+def area_under_peak(peak_channel, peak_sigma, peak_height):
+    """Calculates the area under the peak, using the peak sigma and height.
+    The area is calculated using the cumulative distribution function of a normal distribution,
+    calculating the area between peak-3*sigma and peak+3*sigma.
+    """
+    integrate_area = 3 * peak_sigma
+    area = norm.cdf(
+        peak_channel + integrate_area, loc=peak_channel, scale=peak_sigma
+    ) - norm.cdf(peak_channel - integrate_area, peak_channel, peak_sigma)
+    area *= peak_height
+    return area
