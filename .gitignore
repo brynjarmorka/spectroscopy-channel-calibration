@@ -7,4 +7,7 @@ example_data/**.hdf5
 # the calibrated files are not for GitHub
 Lab3_data_calibrated/** 
 
+# but we add one calibrated file to show the format and to add the folder
+!Lab3_data_calibrated/SEM_known_Cu_calibrated.json
+
 **__pycache__
