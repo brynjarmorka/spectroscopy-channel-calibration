@@ -17,12 +17,11 @@ def init_known_spectrum(
     peaks_keV=None,
     peaks_names=None,
     peaks_channel=None,
-    plot_title="unnamed plot"
 ):
     """
     initializing the spectrum dictionary. 
     Must have a name, filepath, start and stop string, and line endings to read the data.
-    Can have peaks_keV, peaks_names, peaks_channel, and plot_title.
+    Can have peaks_keV, peaks_names, peaks_channel.
 
     Parameters
     ----------
@@ -44,8 +43,6 @@ def init_known_spectrum(
         names of the peaks, by default None
     peaks_channel : list of int, optional
         channel values of the peaks, first a guess then corrected after fitting, by default None
-    plot_title : str, optional
-        title of the plot, by default "unnamed plot"
 
     Returns
     -------
@@ -82,7 +79,6 @@ def init_known_spectrum(
         "peaks_keV": peaks_keV,
         "peaks_names": peaks_names,
         "peaks_channel": peaks_channel,
-        "plot_title": plot_title,
         "dispersion": None,
         "offset": None,
         "kev_calibrated": None,
@@ -97,7 +93,7 @@ def init_known_spectrum(
     return spectrum
 
 
-def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_str=None, stop_str=None, line_endings=None, delimiter=None, peaks_keV=None, peaks_names=None, peaks_channel=None, plot_title="unnamed plot"):
+def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_str=None, stop_str=None, line_endings=None, delimiter=None, peaks_keV=None, peaks_names=None, peaks_channel=None):
     """
     initializing a unknown spectrum dictionary, from a calibrated spectrum.
     assuming the same dispersion and offset as the known spectrum
@@ -125,8 +121,6 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
         names of the peaks, by default None
     peaks_channel : list of int, optional
         channel values of the peaks, first a guess then corrected after fitting, by default None
-    plot_title : str, optional
-        title of the plot, by default "unnamed plot"
 
     Returns
     -------
@@ -178,7 +172,7 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
 
     # checking if the calibrated spectrum has the same length as the new one
     if len(channels) != len(known_spectrum['channel']):
-        print(f"ERROR! The calibrated spectrum has {len(len(known_spectrum['channels']))} data points, while the new one has {len(channels)} data points")
+        print(f"ERROR! The calibrated spectrum has {len(known_spectrum['channel'])} data points, while the new one has {len(channels)} data points")
         print("Returned the new dict as None")
         return None
     
@@ -193,7 +187,6 @@ def init_unknown_spectrum_with_known(*, known_spectrum, name, filepath, start_st
         "peaks_keV": peaks_keV,
         "peaks_names": peaks_names,
         "peaks_channel": peaks_channel,
-        "plot_title": plot_title,
         "dispersion": known_spectrum["dispersion"],
         "offset": known_spectrum["offset"],
         "kev_calibrated": known_spectrum["kev_calibrated"],
