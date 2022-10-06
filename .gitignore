@@ -11,7 +11,6 @@ Lab3_data_calibrated/**
 
 # ignore all the plots, except one example
 plots/**
-# ignore it after it has been created and added to GitHub, so we dont push small html-changes
-plots/SEM_known_Cu_calibrated.html
+!plots/SEM_known_Cu_calibrated.html
 
 **__pycache__
