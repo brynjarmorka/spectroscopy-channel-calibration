@@ -36,3 +36,41 @@ def calibrate_channel_width_two_peaks(peaks_channel, peaks_keV):
     )
 
     return (dispersion, offset)
+
+
+def channel_to_keV(spectrum=None, value=None, array=None, use_offset=True):
+    """
+    Convert either single value or array of values from channel to keV.
+    ( Value - offset ) * dispersion
+
+    Parameters
+    ----------
+    spectrum : dict
+        spectrum dictionary
+    value : int
+        single value to convert
+    array : list
+        array of values to convert
+
+    Returns
+    -------
+    int or list
+        converted value or array
+    """
+
+    # sometimes the offset is not used, eg when calculating the FWHM from std in channels
+    if use_offset:
+        offset = spectrum["offset"]
+    else:
+        offset = 0
+    
+    if spectrum is None:
+        raise ValueError("No spectrum dictionary provided to chennel_to_keV()")
+
+    if value is not None:
+        return (value - offset) * spectrum["dispersion"]
+    if array is not None:
+        return [(x - offset) * spectrum["dispersion"] for x in array]
+
+    else:
+        raise ValueError("No value or array provided to chennel_to_keV()")

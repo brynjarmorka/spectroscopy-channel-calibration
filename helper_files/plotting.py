@@ -2,7 +2,7 @@
 
 import plotly.graph_objects as go
 
-from helper_files.gaussian_fitting import gaussian
+from helper_files.gaussian_fitting import area_under_peak, gaussian
 
 
 def plot_lines(
@@ -197,12 +197,13 @@ def plotly_plot(
             gauss_y = gaussian(
                 x[start:stop], fit_params[i], fit_params[i + 1], fit_params[i + 2]
             )
+            area = area_under_peak(fit_params[i + 1], fit_params[2 + i], fit_params[i])
             fig.add_trace(
                 go.Scatter(
                     x=x[start:stop],
                     y=gauss_y,  # is made from [start:stop] above
                     mode="lines",
-                    name=f"a={fit_params[i]:.2f}, mu={fit_params[i + 1]:.2f}, std={fit_params[i + 2]:.2f}",
+                    name=f"a={fit_params[i]:.2f}, mu={fit_params[i + 1]:.2f}, std={fit_params[i + 2]:.2f}, area={area:.3f}",
                 )
             )
 
