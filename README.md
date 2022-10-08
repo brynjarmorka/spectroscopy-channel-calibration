@@ -49,24 +49,33 @@ This is the file tree:
 │   LICENSE
 │   README.md
 │
-├───example_data
-│       EDS-SEM_GaSb.msa
-│       EDS-TEM_GaSb.msa
-│       Ex1_EDS_GaAs_30kV.emsa
-│       Ex2_NiO_on_Mo_not_calibrated.msa
-│       Ex3_Cu.mca
-│       NiOMo_map_2100.hdf5
-│       No_sample.mca
-│       TEM_NiO.emsa
-│       unknown_not_calibrated.msa
+├───helper_files
+│   │   calibration.py
+│   │   gaussian_fitting.py
+│   │   plotting.py
+│   │   read_data.py
+│   │   saving_json.py
+│   │   spectrum_dict.py
+│   │   __init__.py
 │
-└───helper_files
-    │   calibration.py
-    │   gaussian_fitting.py
-    │   plotting.py
-    │   read_data.py
-    │   spectrum_dict.py
-    │   __init__.py
+├───Lab3_data
+│       SEM_known_Cu.msa
+│       SEM_known_NiO_on_Mo.msa
+│       SEM_unknown.msa
+│       TEM_known_NiO_on_Mo_A.emsa
+│       TEM_known_NiO_on_Mo_B.emsa
+│       TEM_unknown.msa
+│       XRF_known_Cu.mca
+│       XRF_known_Pb.mca
+│       XRF_no_sample.mca
+│       XRF_unknown.mca
+│       XRF_unknown_2nd.mca
+│
+├───Lab3_data_calibrated
+│       SEM_known_Cu_calibrated.json  # example of a plot
+│
+└───plots
+        SEM_known_Cu_calibrated.html  # example of a plot
 ```
 
 The main notebook is called "channel_calibration.ipynb", which contains a step-by-step calibration of a known spectrum, and then using that on an unknown spectrum.
@@ -83,17 +92,39 @@ function_name?
 
 ---
 
-## Example data files
+## Info on the data files
 
-- Ex1_EDS_GaAs_30kV.emsa
-  - Aquired at the SEM Apreo at NTNU NanoLab, 6. September 2022
-- Ex2_NiO_on_Mo_not_calibrated.msa
-  - Aquired by Ton?
-- Ex3_Cu.mca
-  - Aquired by Ton?
-- Info on the other files will come soon
+- SEM_known_Cu.msa
 
----
+  - Bulk Cu
+  - Collected on Hitatchi TM4000 at 15 kV
+
+- SEM_unknown.msa
+
+  - 0.3 mm thick unknown
+  - Hitatchi TM4000 at 15 kV
+
+- TEM_known_NiO_on_Mo.emsa
+
+  - NiO calibration specimen [6]
+  - Collected at Jeol 2100 at 200 kV using a Oxford Instrument 80mm2 SDD
+
+- TEM_unknown.msa
+
+  - Unknown material crushed and deposited on a 300 mesh Cu TEM grid with a holey 20 nm C-support
+  - Data collected at Jeol 2100 at 200 kV using a Oxford Instrument 80mm2 SDD
+
+- XRF_known_Cu.msa
+
+  - Bulk Cu
+  - MoK X-ray source, AmpTek® energy dispersive detector
+
+- XRF_unknown.msa
+
+  - unknown material, 0.3 mm thick
+  - MoK X-ray source AmpTek® energy dispersive detector
+
+- ***
 
 ## Challenges I've had
 
