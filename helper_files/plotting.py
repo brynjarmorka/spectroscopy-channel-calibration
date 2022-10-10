@@ -72,7 +72,7 @@ def plotly_plot(
     stop=2048,
     title="Untitled",
     xaxis_title="Channel number [~10eV]",
-    yaxis_title="Relative intensity [a.u.]",
+    yaxis_title="Relative intensity",
 ):
     """
     Using plotly to make a interactive plot of the data and the fit.
@@ -106,7 +106,7 @@ def plotly_plot(
     xaxis_title : str, optional
         x axis name, by default "Channel number [~10eV]"
     yaxis_title : str, optional
-        y axis name, by default "Relative intensity [a.u.]"
+        y axis name, by default "Relative intensity"
 
     Returns
     -------
